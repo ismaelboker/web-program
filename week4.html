@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="">
+  <p>Name: <input type="text" ng-model="name"></p>
+  <p>color: <input type="text" ng-model="color"></p>
+  <p>size: <input type="text" ng-model="size"></p>
+
+
+  <h1 style="color:{{color}};font-size;:{{size: }};" >Hello {{name}}</h1>
+ 
+
+
+
+    First Name: <input type="text" ng-model="firstName"><br>
+    Last Name: <input type="text" ng-model="lastName"><br>
+    <br>
+    Full Name: {{firstName + " " + lastName}}
+    
+    </div>
+    
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+      $scope.firstName = "John";
+      $scope.lastName = "Doe";
+    });
+    </script>
+
+
+</body>
+
+<body>
+
+    <h1 ng-repeat="x in records">{{x}}</h1>
+    
+    <script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope) {
+        $scope.records = [
+            "Alfreds Futterkiste",
+            "Berglunds snabbköp",
+            "Centro comercial Moctezuma",
+            "Ernst Handel",
+        ]
+    });
+    </script>
+    
+    </body>
+    
+</html>
+
+</div>
